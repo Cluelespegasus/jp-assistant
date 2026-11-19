@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="en-NZ">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="JP Quick Guide"><meta name="theme-color" content="#12334a">
-<title>JP Quick Guide</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JP Appointment Assistant</title>
 <style>
 :root{--navy:#12334a;--blue:#087ea4;--pale:#eef7fa;--ink:#17212b;--muted:#5f6b76;--warn:#fff4d6;--danger:#fde8e8;--ok:#e7f7ed;--white:#fff;--line:#d7e1e7}
 *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#f5f7f9;color:var(--ink)}
-header{background:linear-gradient(135deg,var(--navy),#17647c);color:#fff;padding:calc(18px + env(safe-area-inset-top)) calc(18px + env(safe-area-inset-right)) 18px calc(18px + env(safe-area-inset-left))} header h1{margin:0;font-size:1.55rem} header p{margin:.35rem 0 0;opacity:.9}
-main{max-width:820px;margin:auto;padding:16px max(16px,env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 5px 18px #17374a12;margin-bottom:14px}
+header{background:linear-gradient(135deg,var(--navy),#17647c);color:#fff;padding:22px 18px} header h1{margin:0;font-size:1.55rem} header p{margin:.35rem 0 0;opacity:.9}
+main{max-width:820px;margin:auto;padding:16px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 5px 18px #17374a12;margin-bottom:14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.choice{border:2px solid #d8e6ec;background:#fff;border-radius:14px;padding:14px;text-align:left;font-weight:700;color:var(--navy);cursor:pointer;min-height:58px}.choice:hover,.choice:focus{border-color:var(--blue);background:var(--pale)}
-button{font:inherit}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.primary,.secondary,.danger{border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer}.primary{background:var(--blue);color:#fff;min-height:48px}.secondary{background:#e8eef2;color:var(--navy);min-height:48px}.danger{background:#a51d2d;color:#fff}
+button{font:inherit}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.primary,.secondary,.danger{border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer}.primary{background:var(--blue);color:#fff}.secondary{background:#e8eef2;color:var(--navy)}.danger{background:#a51d2d;color:#fff}
 .badge{display:inline-block;background:var(--pale);color:#075f78;border-radius:999px;padding:5px 10px;font-size:.8rem;font-weight:700}.progress{height:8px;background:#e5edf1;border-radius:999px;overflow:hidden;margin:12px 0}.progress>div{height:100%;background:var(--blue)}
 h2{color:var(--navy);margin:.4rem 0 .7rem} h3{color:var(--navy)}.step{font-size:1.13rem;line-height:1.5}.note,.warning,.stop,.success,.wording{border-radius:12px;padding:14px;margin:14px 0}.note{background:var(--pale);border-left:5px solid var(--blue)}.warning{background:var(--warn);border-left:5px solid #d58a00}.stop{background:var(--danger);border-left:5px solid #a51d2d}.success{background:var(--ok);border-left:5px solid #218539}.wording{background:#f3f0ff;border:1px solid #c9bcff;font-family:Georgia,serif;font-size:1.05rem}.source{color:var(--muted);font-size:.82rem;margin-top:12px}.topbar{display:flex;justify-content:space-between;gap:10px;align-items:center}.hidden{display:none}.search{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font-size:1rem;margin:8px 0 14px}.small{font-size:.9rem;color:var(--muted)} footer{text-align:center;color:var(--muted);font-size:.8rem;padding:20px}.check{display:flex;gap:10px;align-items:flex-start;margin:10px 0}.check input{margin-top:5px;transform:scale(1.2)}
 @media print{header,.actions,#homeControls,footer{display:none}body{background:#fff}.card{box-shadow:none;border:0}}
 </style>
 </head>
 <body>
-<header><h1>JP Quick Guide</h1><p>Fast appointment guidance for New Zealand Justices of the Peace</p></header>
+<header><h1>JP Appointment Assistant</h1><p>Quick cheat sheet for JP appointments</p></header>
 <main>
 <section id="home" class="card">
  <div class="topbar"><div><span class="badge">START HERE</span><h2>What are you doing?</h2></div></div>
@@ -31,7 +31,7 @@ h2{color:var(--navy);margin:.4rem 0 .7rem} h3{color:var(--navy)}.step{font-size:
  <div class="actions"><button id="back" class="secondary" onclick="back()">Back</button><button id="next" class="primary" onclick="next()">Next</button></div>
 </section>
 </main>
-<footer>Quick-reference aide for New Zealand JPs. Check current official guidance whenever a requirement is unclear or may have changed. The decision to act remains with the Justice.</footer>
+<footer>Quick-reference aide only. The decision to act remains with the Justice.</footer>
 <script>
 const S={a:'Aide Memoire 2026',m:'RFNZJA Ministerial Duties Manual 2020.2'};
 const common=[
@@ -133,9 +133,25 @@ opa:{title:'Ordinary power of attorney',steps:[{h:'Witness only one side',t:'A J
 apostille:{title:'Apostille',steps:[{h:'JP cannot certify for apostille',t:'Refer the client to the Department of Internal Affairs. Copies accepted for apostille must be certified by the original issuing office or notarised by a notary public.',kind:'stop',src:'Manual §3.5'}]},
 'warrant-search':{title:'Search warrant / production order',steps:[{h:'Only authorised issuing officers',t:'If you are not an authorised issuing officer, you cannot sign. Ask the officer to use their agency’s issuing-officer contact list.',kind:'stop',src:'Aide Memoire p 21'}]},
 'warrant-arrest':{title:'Arrest warrant',steps:[{h:'JP cannot issue',t:'Only judicial officers under the Criminal Procedure Act may issue arrest warrants. Refer the officer to the local District Court.',kind:'stop',src:'Aide Memoire p 21'}]},
-conflict:{title:'Conflict or relationship',steps:[{h:'Do not act',t:'Refrain from acting for family and close friends. Do not act where you have a personal, professional or business interest in the outcome or where impartiality may reasonably appear compromised.',kind:'stop',src:'Aide Memoire p 20; Manual §9.4'}]}
+conflict:{title:'Conflict or relationship',steps:[{h:'Do not act',t:'Refrain from acting for family and close friends. Do not act where you have a personal, professional or business interest in the outcome or where impartiality may reasonably appear compromised.',kind:'stop',src:'Aide Memoire p 20; Manual §9.4'}]},
+'official-statements':{title:'Official statements',steps:[{h:'Which statement do you need?',t:'Tap a statement to display the wording.',options:[['Statutory declaration question','statement-declaration'],['Affidavit oath','statement-oath'],['Affidavit affirmation','statement-affirmation'],['Jurat - sworn','statement-jurat-sworn'],['Jurat - affirmed','statement-jurat-affirmed'],['Joint jurat','statement-jurat-joint'],['Exhibit note','statement-exhibit'],['Ordinary certified copy','statement-copy'],['AML certified identity copy','statement-aml'],['Electronic original','statement-electronic'],['Text message copy','statement-text'],['Client makes a mark','statement-mark'],['Citizenship oath','statement-cit-oath'],['Citizenship affirmation','statement-cit-affirm']]}]},
+'statement-declaration':{title:'Statutory declaration',steps:[{h:'Ask the declarant',html:'<div class="wording">Do you solemnly and sincerely declare that the contents of this your declaration are true?</div><p><strong>Client:</strong> “Yes” or “I do”.</p>'}]},
+'statement-oath':{title:'Affidavit oath',steps:[{h:'Ask the deponent',html:'<div class="wording">Do you swear by Almighty God that the contents of this your affidavit are true, so help you God?</div><p><strong>Client:</strong> “Yes” or “I do”.</p>'}]},
+'statement-affirmation':{title:'Affidavit affirmation',steps:[{h:'Ask the deponent',html:'<div class="wording">Do you solemnly and sincerely affirm that the contents of this your affidavit are true?</div><p><strong>Client:</strong> “Yes” or “I do”.</p>'}]},
+'statement-jurat-sworn':{title:'Jurat - sworn',steps:[{h:'Complete the jurat',html:'<div class="wording">Sworn by [deponent signature] at [town] this [day] day of [month] 20[year] before me [Justice’s signature].</div>'}]},
+'statement-jurat-affirmed':{title:'Jurat - affirmed',steps:[{h:'Complete the jurat',html:'<div class="wording">Affirmed by [deponent signature] at [town] this [day] day of [month] 20[year] before me [Justice’s signature].</div>'}]},
+'statement-jurat-joint':{title:'Joint jurat',steps:[{h:'Same method for both deponents',html:'<div class="wording">Severally sworn/affirmed by [deponent signature] and [deponent signature] at [town] this [day] day of [month] 20[year] before me [Justice’s signature].</div><p>Delete the method that does not apply. If the deponents use different methods, complete a separate jurat for each.</p>'}]},
+'statement-exhibit':{title:'Exhibit note',steps:[{h:'Write on the attachment',html:'<div class="wording">This is the document marked “[letter/number]” referred to in the attached declaration/affidavit of [name], declared/sworn/affirmed at [place] on [day] of [month] 20[year] before me [Justice’s signature].</div><p>Choose the words that match the document and method used.</p>'}]},
+'statement-copy':{title:'Ordinary certified copy',steps:[{h:'Use agency wording if supplied',html:'<div class="wording">Certified true copy of a document presented to me as an original</div><p>or</p><div class="wording">Certified true copy, original sighted</div>'}]},
+'statement-aml':{title:'AML certified identity copy',steps:[{h:'Use agency wording if supplied',html:'<div class="wording">Certified true copy of [passport/driver licence/another document] that represents the named individual [client’s name].</div>'}]},
+'statement-electronic':{title:'Electronic original',steps:[{h:'Example wording',html:'<div class="wording">I certify this is a true transcript printed without alteration from the website www.__, sighted by me.</div>'}]},
+'statement-text':{title:'Text message copy',steps:[{h:'Write on the transcript',html:'<div class="wording">Certified as a true copy of the text message sent from phone number __________ on __________ and received at __________ am/pm, which I sighted on a cell phone on this date.</div>'}]},
+'statement-mark':{title:'Client makes a mark',steps:[{h:'Completion note',html:'<div class="wording">Declared/sworn/affirmed at ______ this __ day of ______ 20__ before me and I certify that I first read and explained this declaration/affidavit to the declarant/deponent and that they appeared to clearly understand it and made their mark in my presence.</div><p>Then sign, stamp and date.</p>'}]},
+'statement-cit-oath':{title:'Citizenship oath',steps:[{h:'Oath of allegiance',html:'<div class="wording">I [name] swear that I will be faithful and bear true allegiance to His Majesty, King Charles the Third, King of New Zealand, his heirs and successors, according to law, and that I will faithfully observe the laws of New Zealand and fulfil my duties as a New Zealand citizen, so help me God.</div>'}]},
+'statement-cit-affirm':{title:'Citizenship affirmation',steps:[{h:'Affirmation of allegiance',html:'<div class="wording">I [name] solemnly and sincerely affirm that I will be faithful and bear true allegiance to His Majesty, King Charles the Third, King of New Zealand, his heirs and successors, according to law, and that I will faithfully observe the laws of New Zealand and fulfil my duties as a New Zealand citizen.</div>'}]}
+
 };
-const menu=[['copy-purpose','Certified copy'],['declaration','Statutory declaration'],['affidavit','Affidavit'],['witness','Witness a signature'],['passport','Passport application'],['dissolution','Dissolution'],['will-epa','Will / power of attorney'],['special','Special requirements'],['cannot','Can I do this?']];
+const menu=[['copy-purpose','Certified copy'],['declaration','Statutory declaration'],['affidavit','Affidavit'],['witness','Witness a signature'],['passport','Passport application'],['dissolution','Dissolution'],['will-epa','Will / power of attorney'],['special','Special requirements'],['cannot','Can I do this?'],['official-statements','Official statements']];
 let current='',idx=0,trail=[];
 function renderMenu(filter=''){const c=document.getElementById('choices');c.innerHTML='';menu.filter(x=>x[1].toLowerCase().includes(filter.toLowerCase())).forEach(([id,label])=>{let b=document.createElement('button');b.className='choice';b.textContent=label;b.onclick=()=>start(id);c.appendChild(b)})}
 function start(id,push=true){if(push&&current)trail.push([current,idx]);current=id;idx=0;document.getElementById('home').classList.add('hidden');document.getElementById('flow').classList.remove('hidden');render()}
